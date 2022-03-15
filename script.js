@@ -114,3 +114,11 @@ function keyValuePairsToObjects(container) {
     return { ...data, [key]: value }
   }, {})
 }
+
+let pxValue = document.getElementById("pxValue")
+let maxHeight = document.getElementById("maxHeight")
+
+pxValue.value = 200
+pxValue.addEventListener("input", function() {
+  maxHeight.style.maxHeight = this.value + "px"
+})
